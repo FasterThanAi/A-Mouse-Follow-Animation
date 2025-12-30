@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.7rem;
+    color: #070707;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    gap: 1.5rem;
+}
+h1{
+    padding: 24px;
+    line-height: 1.3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.btn{
+    padding: 16px;
+    border: 2px solid powderblue;
+}
+.btn:hover,
+.btn:focus-visible{
+    color: #fff;
+    background-color: #ff809f;
+}
+.pointer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 2rem;
+    aspect-ratio: 1;
+    background-color: rgb(0 0 0/50%);
+    border: 1px solid transparent;
+    border-radius: 100%;
+    pointer-events: none;
+    transform: translate3d(var(--mouseX,0),var(--mouseY,0),0) translate(-50%,-50%);
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, opacity 0.3s ease
+}
+
+.pointer-large {
+    width: 5rem; /* Increased size */
+    background-color: rgba(0, 0, 0, 0.1); /* Transparent/Light fill */
+    border: 2px solid #ff809f; /* Optional: adds a border to keep it visible */
+}
